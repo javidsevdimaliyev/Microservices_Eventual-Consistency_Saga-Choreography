@@ -1,6 +1,6 @@
 using MassTransit;
 using Payment.API.Consumers;
-using Shared;
+using EventBus.RabbitMQ;
 
 var builder = WebApplication.CreateBuilder(args);
 

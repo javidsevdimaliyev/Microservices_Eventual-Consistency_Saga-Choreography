@@ -1,6 +1,6 @@
 using MassTransit;
 using MongoDB.Driver;
-using Shared;
+using EventBus.RabbitMQ;
 using Stock.API.Consumers;
 using Stock.API.Services;
 

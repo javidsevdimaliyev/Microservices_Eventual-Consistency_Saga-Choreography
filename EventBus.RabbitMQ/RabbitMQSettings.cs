@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared
+namespace EventBus.RabbitMQ
 {
     public static class RabbitMQSettings
     {

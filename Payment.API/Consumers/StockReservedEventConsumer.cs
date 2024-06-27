@@ -1,5 +1,5 @@
 ﻿using MassTransit;
-using Shared.Events;
+using EventBus.RabbitMQ.Events;
 
 namespace Payment.API.Consumers
 {

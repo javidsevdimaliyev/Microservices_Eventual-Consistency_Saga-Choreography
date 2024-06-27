@@ -3,8 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Order.API.Consumers;
 using Order.API.Models.Contexts;
 using Order.API.ViewModels;
-using Shared;
-using Shared.Events;
+using EventBus.RabbitMQ;
+using EventBus.RabbitMQ.Events;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -56,7 +56,7 @@ app.MapPost("/create-order", async (CreateOrderVM model, OrderAPIDbContext conte
         BuyerId = order.BuyerId,
         OrderId = order.Id,
         TotalPrice = order.TotalPrice,
-        OrderItems = order.OrderItems.Select(oi => new Shared.Messages.OrderItemMessage()
+        OrderItems = order.OrderItems.Select(oi => new EventBus.RabbitMQ.Messages.OrderItemMessage()
         {
             Count = oi.Count,
             Price = oi.Price,

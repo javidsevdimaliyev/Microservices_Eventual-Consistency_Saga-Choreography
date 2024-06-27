@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Order.API.Models.Contexts;
-using Shared.Events;
+using EventBus.RabbitMQ.Events;
 
 namespace Order.API.Consumers
 {
